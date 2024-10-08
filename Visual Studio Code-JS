@@ -1,4 +1,5 @@
 index.JS: 
+/*
 **Código 1**
 const readline = require('readline');
  
@@ -11,6 +12,6 @@ rl.question('Qual é o seu signo?', (resposta)) => {
     console.log(`O signo informado foi: ${resposta}`);
     rl.close();
 }
-
 **Código 2**
+
 
