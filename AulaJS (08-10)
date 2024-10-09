@@ -12,22 +12,6 @@ rl.question('Qual é o seu signo?', (resposta)) => {
 -Código 2:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -----------------------------------------------------------
 **readlineSync**
 -Código 1:
@@ -166,8 +150,7 @@ console.log(lista);
 console.log(lista[1]);
 lista[1] = "Papai Noel";
 console.log(lista);
--------------------------------------------------------------------
-(Término da aula do dia 08/10/2024)
+
 -Código 3
 
 
