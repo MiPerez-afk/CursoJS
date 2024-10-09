@@ -16,6 +16,7 @@ rl.question('Qual é o seu signo?', (resposta)) => {
 
 -----------------------------------------------------------
 **readlineSync**
+Instalar: **npm install readline-sync**
 -Código 1:
 // npm install readline-sync
 const readline = require('readline-sync');
