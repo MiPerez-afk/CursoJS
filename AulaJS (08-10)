@@ -1,0 +1,311 @@
+**index.JS:**                                                                                                                                                                 
+-Código 1:                                                                                                                                                         
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+rl.question('Qual é o seu signo?', (resposta)) => {
+    console.log(`O signo informado foi: ${resposta}`);
+    rl.close();
+}
+-Código 2:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------
+**readlineSync**
+-Código 1:
+// npm install readline-sync
+const readline = require('readline-sync');
+ 
+const nome = readline.question("Qual o seu signo?");
+console.log(`O signo informado foi ${nome}`);
+
+-Código 1.1:
+// npm install readline-sync
+const readline = require('readline-sync');
+
+const nome = readline.question("Qual o seu nome? ");
+console.log('O nome informado foi %s', nome); 
+
+-Código 1.2
+// npm install readline-sync
+const readline = require('readline-sync');
+
+const nome = readline.question("Qual o seu nome? ");
+console.log(typeof(nome));
+
+-Código 1.3
+// npm install readline-sync
+const readline = require('readline-sync');
+
+const nome = readline.question("Qual o seu nome? ");
+let idade = readline.question("Qual a sua idade? ");
+idade = parseInt(idade);
+
+console.log(typeof(idade));
+
+-Código 1.4
+// npm install readline-sync
+const readline = require('readline-sync');
+
+const nome = readline.question("Qual o seu nome? ");
+
+// let idade = readline.question("Qual a sua idade? ");
+// idade = parseInt(idade);
+
+// const idade = parseInt(readline.question("Qual a sua idade? "));
+
+const idade = readline.questionInt("Qual a sua idade? ");
+const altura = readline.questionFloat("Qual a sua altura? ");
+
+console.log(typeof(altura));
+
+-Código 1.5(Desafio 1)
+// npm install readline-sync
+const readline = require('readline-sync');
+let multiplicador = 1;
+const numero = readline.questionInt("Qual a tabuada que deseja construir? ");
+
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
+
+-Código 1.6(Deafio 2)
+const readline = require(`readline-sync`);
+
+const nota1 = readline.questionFloat("Indique a primeira nota:")
+const nota2 = readline.questionFloat("Indique a segunda nota:")
+const nota3 = readline.questionFloat("Indique a terceira nota:")
+const nota4 = readline.questionFloat("Indique a quarta nota:")
+ media = (nota1 + nota2 + nota3 + nota4)/4
+   console.log(`A média final do aluno foi de ${media}`)
+
+-Código 2
+// npm install readline-sync
+const readline = require('readline-sync');
+
+const pessoa = {
+    "nome": "Tafarel Chicotti",
+    "idade": 32,
+    "cidade": "Araraquara",
+    "profissao": "Professor",
+    "endereco" : {
+        "logradouro": "Rua A",
+        "complemento": "Frente",
+        "numero": 548,
+        "bairro": "Jardim Jardinada",
+        "cidade": "Araraquara",
+        "uf": "São Paulo"
+    }
+};
+console.log(pessoa.endereco.logradouro);
+
+-Código 2.1
+const readline = require('readline-sync');
+
+const pessoa = {
+    "nome": "Tafarel Chicotti",
+    "idade": 32,
+    "cidade": "Araraquara",
+    "profissao": "Professor",
+    "endereco" : {
+        "logradouro": "Rua A",
+        "complemento": "Frente",
+        "numero": 548,
+        "bairro": "Jardim Jardinada",
+        "cidade": "Araraquara",
+        "uf": "São Paulo"
+    }
+};
+console.log(pessoa.endereco.logradouro);
+pessoa.endereco.logradouro = "Rua Joao Batista";
+console.log(pessoa.endereco.logradouro);
+delete pessoa.cidade; // Remover uma propriedade chamada cidade
+pessoa.genero = "Bonito"; // Incluir uma propriedade chamada "genero"
+console.log(pessoa);
+
+-Código 2.3
+// npm install readline-sync
+const readline = require('readline-sync');
+
+const lista = ["Teste", "Exemplo", "Agora vai"] // Array ("Lista")
+
+console.log(lista);
+// console.log(lista.pop());
+// console.log(lista);
+// lista.push("Simboragoraja");
+// console.log(lista);
+// console.log(lista[2]);
+delete lista[1];
+console.log(lista);
+console.log(lista[1]);
+lista[1] = "Papai Noel";
+console.log(lista);
+-------------------------------------------------------------------
+(Término da aula do dia 08/10/2024)
+-Código 3
+
+
+-------------------------------------------------------------------
+-Código Diversão:
+// npm install readline-sync
+var readlineSync = require('readline-sync'),
+  MAX = 100, MIN = 0, value = 50, key;
+console.log('\n\n' + (new Array(20)).join(' ') +
+  '[A] <- -> [D]  FIX: [BARRA DE ESPAÇO]\n');
+while (true) {
+  console.log('\x1B[1A\x1B[K|' +
+    (new Array(value + 1)).join('-') + 'O' +
+    (new Array(MAX - value + 1)).join('-') + '| ' + value);
+  key = readlineSync.keyIn('',
+    {hideEchoBack: true, mask: '', limit: 'ad '});
+  if (key === 'a') { if (value > MIN) { value--; } }
+  else if (key === 'd') { if (value < MAX) { value++; } }
+  else { break; }
+}
+console.log('\nO que vc precisa é de ' + value + ' pinto/s');
+-------------------------------------------------------------------
+**Html + Css:**
+-contato.html:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Contato</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="quem-somos.html">Quem somos</a>
+            <a class="ativo" href="contato.html">Contato</a>
+            <!-- a = anchor | link ou âncora -->
+        </nav>
+    </header>
+</body>
+</html>
+-------------------------------------------------------------------
+-estilo.css:
+:root {
+    --cor-principal: #1ed89b;
+    --cor-secundaria: #000;
+}
+/*
+a:link - estilo padrão
+a:visited - estilo visitado
+a:active - estilo quando clicado
+a:hover - estilo quando o mouse passa por cima
+*/
+
+header nav a {
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    padding: 5px;
+    text-decoration: none;
+}
+header nav a:hover, header nav a.item-ativo {
+    color: #fff;
+    border-color: var(--cor-principal);
+    background-color: var(--cor-principal);
+}
+#inicio {
+    min-height: 400px;
+    background-color: aliceblue;
+}
+#quem-somos {
+    min-height: 400px;
+    background-color: bisque;
+}
+#contato {
+    min-height: 400px;
+    background-color: brown;
+}
+-----------------------------------------------------------------
+-index.html:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Meu site!</h1>
+        <nav>
+            <a class="item-menu" href="#inicio">Inicio</a>
+            <a class="item-menu" href="#quem-somos">Quem somos</a>
+            <a class="item-menu" href="#contato">Contato</a>
+            <!-- a = anchor | link ou âncora -->
+        </nav>
+    </header>
+    <section id="inicio"></section>
+    <section id="quem-somos"></section>
+    <section id="contato"></section>
+
+    <script type="text/javascript">
+        const ancoras = document.querySelectorAll('a.item-menu');
+
+        ancoras.forEach(ancora => {
+            ancora.addEventListener('click', (event) => {
+                event.preventDefault(); // cancelar o comportamento padrão da âncora
+
+                // Remover todas as classes "item-ativo" do meu conjunto
+                ancoras.forEach(item => item.classList.remove('item-ativo'));
+
+                // Adicionar a class "item-ativo" no item que clicou.
+                ancora.classList.add('item-ativo');
+            });
+        });
+    </script>
+</body>
+</html>
+---------------------------------------------------------------
+-quem_somos.html:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Quem somos</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a class="ativo" href="quem-somos.html">Quem somos</a>
+            <a href="contato.html">Contato</a>
+            <!-- a = anchor | link ou âncora -->
+        </nav>
+    </header>
+</body>
+</html>
