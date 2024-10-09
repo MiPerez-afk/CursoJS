@@ -9,6 +9,7 @@ rl.question('Qual é o seu signo?', (resposta)) => {
     console.log(`O signo informado foi: ${resposta}`);
     rl.close();
 }
+-----------------------------------------------------------
 -Código 2:
 
 
@@ -78,7 +79,7 @@ console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
 console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
 console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
 console.log(`${numero} * ${multiplicador} = ${numero * multiplicador++}`);
-
+------------------------------------------------------------------------------
 -Código 1.6(Deafio 2)
 const readline = require(`readline-sync`);
 
@@ -88,7 +89,7 @@ const nota3 = readline.questionFloat("Indique a terceira nota:")
 const nota4 = readline.questionFloat("Indique a quarta nota:")
  media = (nota1 + nota2 + nota3 + nota4)/4
    console.log(`A média final do aluno foi de ${media}`)
-
+------------------------------------------------------------------------------
 -Código 2
 // npm install readline-sync
 const readline = require('readline-sync');
