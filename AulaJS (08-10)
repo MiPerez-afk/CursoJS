@@ -6,12 +6,25 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-rl.question('Qual é o seu signo?', (resposta)) => {
+
+rl.question('Qual é o seu signo?', (resposta) => {
     console.log(`O signo informado foi: ${resposta}`);
     rl.close();
-}
+});
 -----------------------------------------------------------
 -Código 2:
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 -----------------------------------------------------------
@@ -155,6 +168,21 @@ lista[1] = "Papai Noel";
 console.log(lista);
 
 -Código 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 -------------------------------------------------------------------
