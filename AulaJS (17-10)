@@ -176,7 +176,7 @@ console.log("Vc será submetido aos exames, então venha no dia 11/09");
 } else {
   console.log("Vc ainda não está apto para se inscrever")
 }  
-
+-------------------------------------------------------------------------
 -Código 3.1(atividade)
 /**
  * Solicite um número inteiro no terminal e exibir se é par ou ímpar.
@@ -194,7 +194,7 @@ if (numero % 2 === 0) {
 } else {
   console.log(`O número ${numero} é ímpar.`);
 }
-
+---------------------------------------------------------------------------
 -Código 3.2(atividade 2)
 // npm install readline-sync
 const readline = require("readline-sync");
@@ -206,10 +206,10 @@ const media = (nota1 + nota2 + nota3 + nota4)/4
 
 if (media >= 6) {
   console.log(`O aluno/a teve ${media} de media, então ele foi aprovado`);
-} else {
+} else if {
   console.log(`O aluno/a teve ${media} de media, então ele não foi aprovado`);
 }
-
+------------------------------------------------------------------------------
 -Código 3.3(Desafio)
 // npm install readline-sync
 const readline = require("readline-sync");
@@ -236,13 +236,124 @@ let valorcomDesconto = totalVendido - (totalVendido * desconto);
 console.log(`Valor Original: R$ ${(totalVendido.toFixed(2))}`);
 console.log(`Valor com Desconto: R$ ${(valorcomDesconto.toFixed(2))}`);
 console.log(`Taxa de Desconto: R$ ${desconto * 100}%`);
-
+---------------------------------------------------------------------------------
 -Código 3.4
+*   - Bem-vindo Recruta.
+ * Se for maior que 18 e do sexo feminino, perguntar se deseja se alistar.
+ * Se a pessoa responder que sim, exibir a mensagem:
+ *   - Bem-vindo Guerreira.
+ * Senão, exibir uma mensagem de "Obrigado."
+ */
+const readline = require('readline-sync');
 
+const idade = readline.questionInt("Qual a sua idade? ");
+const sexo = readline.question("Qual o seu sexo? M - Masculino | F - Feminino ");
 
+if (idade >= 18 && sexo.toUpperCase() == "M") {
+    console.log("Bem-vindo Recruta.");
+} else if (idade >= 18 && sexo == "F") {
+    const resposta = readline.question("Voce deseja se alistar no exercito? SIM | NAO ").toLowerCase();
+    if (resposta == "sim") {
+        console.log('Bem-vinda Guerreira');
+    } else {
+        console.log("Obrigado.");
+    }
+} else {
+    console.log("Obrigado.");
+}
 
+-Código 4
+const readline = require('readline-sync')
 
+const tabuada = readline.questionInt("Informe um numero para a tabuada: ");
 
+for(let multiplicador = 1; multiplicador <=10; multiplicador++) {
+    let resultado = tabuada * multiplicador;
+    console.log(`${tabuada} x ${multiplicador} = ${resultado}`);
+}
+
+-Código 4.1
+const readline = require('readline-sync')
+
+const i = readline.questionInt("Informe um numero para a Tabuada : ");
+for( let i = 1; i <=10; i++){
+    for(let j = 1; j <=10; j++) {
+    let resultado = i * j;
+    console.log(`${i} x ${j} = ${resultado}`);
+    }
+    console.log("\n------------\n");
+}
+-Código 4.3(Desafio)
+const readline = require('readline-sync')
+
+for (let i = 0; i < 5; i++) {
+      let numero = readline.questionInt("Informe o numero: ");
+
+      let resultado = numero % 2;
+      if (resultado ==0) {
+        console.log(`O numero ${numero} é par. `);
+      } else {
+         console.log(`O numero ${numero} é impar. `);
+      }
+}
+
+-Código 4.4
+let contador = 0
+while(contador < 5) {
+    console.log(contador);
+    contador++
+}
+
+-Código 4.5
+let contador = 0;
+console.log('Agora com While');
+while(contador < 5) {
+    console.log(contador);
+    contador++;
+}
+
+console.log('Agora com DoWhile');
+do {
+    console.log(contador);
+    contador--;
+} while(contador > 0);
+
+-Código 4.6
+const readline = require('readline-sync')
+
+let soma = 0;
+
+do {
+    let numero = parseFloat(readline.question('Digite um numero: '));
+    soma += numero;
+    console.log(`Soma atual: ${soma}`);
+} while (soma < 100);
+
+console.log(`A soma final é ${soma}, maior  ou igual a 100.`);
+
+-Código 4.7
+const readline = require('readline-sync')
+
+const senhaCorreta = '0608';
+let tentativas = 0;
+let senha;
+
+do {
+    senha = readline.question('Informe a senha: ');
+    tentativas++;
+    
+    if (senha === senhaCorreta) {
+        console.log('Acesso permitido. ');
+        break;
+    } else {
+        console.log(`Senha incorreta. Tentativa ${tentativas} de 5.`);
+    }
+} while (tentativas < 5)
+
+if (tentativas === 5 && senha !== senhaCorreta) {
+    console.log('Numero máximo de tentativas atingido. Acesso negado.');
+}
+-Código 4.8
 
 
 
@@ -264,7 +375,7 @@ while (true) {
   else if (key === 'd') { if (value < MAX) { value++; } }
   else { break; }
 }
-console.log('\nO que vc precisa é de ' + value + ' pinto/s');
+console.log('\nO que vc precisa é de ' + value + ' de Trabalhadores');
 -------------------------------------------------------------------
 **Html + Css:**
 -contato.html:
