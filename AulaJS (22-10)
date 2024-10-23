@@ -11,7 +11,7 @@ rl.question('Qual é o seu signo?', (resposta) => {
     console.log(`O signo informado foi: ${resposta}`);
     rl.close();
 });
------------------------------------------------------------
+
 -Código 2:
 
 
@@ -261,7 +261,7 @@ if (idade >= 18 && sexo.toUpperCase() == "M") {
 } else {
     console.log("Obrigado.");
 }
-
+-------------------------------------------------------------------------
 -Código 4
 const readline = require('readline-sync')
 
@@ -353,7 +353,64 @@ do {
 if (tentativas === 5 && senha !== senhaCorreta) {
     console.log('Numero máximo de tentativas atingido. Acesso negado.');
 }
--Código 4.8
+--------------------------------------------------------------------
+-Código 5
+Olhar no GitHub do Tafarel:
+- Link:https://github.com/tchicotti/curso-js
+- Acessar 002-codigo-pratico-js
+- 001-funcoes.md
+
+-Código 5.1
+const readline = require('readline-sync');
+
+function soma(numero1, numero2) {
+    return numero1 + numero2;
+}
+
+function subtracao(numero1, numero2) {
+    return numero1 - numero2;
+}
+
+function multiplicacao(numero1, numero2) {
+    return numero1 * numero2;
+}
+
+function divisao(numero1, numero2) {
+    return numero1 / numero2;
+}
+
+const number1 = readline.questionInt("Informe o primeiro numero: ");
+const operacao = readline.question("Informe a operacao desejada (+ - * / ): ");
+const number2 = readline.questionInt("Informe o segundo numero: ");
+let resultado;
+
+if (operacao == "+") {
+    resultado = soma(number1, number2);
+} else if (operacao == "-") {
+    resultado = subtracao(number1, number2);
+} else if (operacao == "*") {
+    resultado = multiplicacao(number1, number2);
+} else if (operacao == "/") {
+    resultado = divisao(number1, number2);
+}
+
+console.log(`${number1} ${operacao} ${number2} = ${resultado}`);
+
+-Código 5.2
+const readline = require('readline-sync');
+
+const num1 = Number(readline.questionFloat('Digite o primeiro numero: '));
+const num2 = Number(readline.questionFloat('Digite o segundo numero: '));
+const num3 = Number(readline.questionFloat('Digite o terceiro numero: '));
+
+const elevarQuintaPotencia = (n) => n ** 5;
+
+const compararNumeros = (n1, n2) => (n1 > n2 ? n1 : n2);
+
+console.log(`O primeiro número elevado à quinta potência é: ${elevarQuintaPotencia(num1)}`);
+console.log(`O maior número entre o segundo e o terceiro é: ${compararNumeros(num2, num3)}`);
+-------------------------------------------------------------------
+-Código 6
 
 
 
