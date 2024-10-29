@@ -464,7 +464,7 @@ console.log(frutas.find(fruta => fruta.startsWith("m")));
 
 console.log(frutas.findIndex(fruta => fruta.startsWith("banana")));
 // fn findIndex - Retorna a posição do primeiro elemento que satisfaz a condição ou -1
-
+-------------------------------------------------------------------
 -Código 7
 
 
