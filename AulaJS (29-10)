@@ -466,7 +466,8 @@ console.log(frutas.findIndex(fruta => fruta.startsWith("banana")));
 // fn findIndex - Retorna a posição do primeiro elemento que satisfaz a condição ou -1
 -------------------------------------------------------------------
 -Código 7(Desafio 1 à 10)
-1) const readline = require('readline-sync');
+1) 
+const readline = require('readline-sync');
 
 for (let i = 0;  i < 5; i++) {
     let numero = readline.questionFloat("Informe o numero a ser analisado: ");
@@ -478,10 +479,12 @@ for (let i = 0;  i < 5; i++) {
         console.log(`O numero ${numero} é impar. `);
     }
 }
-2)for (let i = 1; i <= 20; i++) {
+2)
+for (let i = 1; i <= 20; i++) {
     console.log(i);
 }
-3) const readline = require(`readline-sync`);
+3) 
+const readline = require(`readline-sync`);
 
 const nota1 = readline.questionFloat("Indique a primeira nota:")
 const nota2 = readline.questionFloat("Indique a segunda nota:")
@@ -489,7 +492,8 @@ const nota3 = readline.questionFloat("Indique a terceira nota:")
 const nota4 = readline.questionFloat("Indique a quarta nota:")
  media = (nota1 + nota2 + nota3 + nota4)/4;
    console.log(`A média final do aluno foi de ${media}`)
-4)const readline = require(`readline-sync`);
+4)
+const readline = require(`readline-sync`);
 
 function dobro(num) {
     return num * 2;
@@ -497,12 +501,14 @@ function dobro(num) {
 
 let numeroDobro = parseFloat(readline.question("Digite um numero para receber o dobro: "));
 console.log("O dobro é:", dobro(numeroDobro));
-5) for (let i = 1; i <= 100; i++) {
+5)
+for (let i = 1; i <= 100; i++) {
     if (i % 3 === 0 && i% 5 === 0) {
         console.log(i);
     }
 }
-6) const readline = require(`readline-sync`);
+6) 
+const readline = require(`readline-sync`);
 
 
 const valor1 = parseFloat(readline.question("Digite o primeiro valor: "));
@@ -515,7 +521,8 @@ if (valor1 > valor2) {
 } else {
     console.log("Os dois valores são iguais:", valor1);
 }
-7)const readline = require(`readline-sync`);
+7)
+const readline = require(`readline-sync`);
 
 let numeros = [];
 let numero;
@@ -535,14 +542,16 @@ console.log("Soma:", soma);
 console.log("Menor numero:", menor);
 console.log("Maior numero:", maior);
 console.log("Média:", media);
-8)const readline = require(`readline-sync`);
+8)
+const readline = require(`readline-sync`);
 
 let soma100 = 0;
 for (let i =1; i <= 100; i++) {
     soma100 += i;
 }
 console.log(`A soma dos numeros de 1 a 100 é ${soma100}.`);
-9) const readline = require(`readline-sync`);
+9) 
+const readline = require(`readline-sync`);
 
 function ehPrimo(num) {
     if (num <= 1) return false;
@@ -554,7 +563,8 @@ function ehPrimo(num) {
 
 const numeroPrimo = parseInt(readline.question("Digite um numro para verificar se e o primo: "));
 console.log(ehPrimo(numeroPrimo) ? "O numero e primo." : "O numnero nao e primo.");
-10) const readline = require(`readline-sync`);
+10) 
+const readline = require(`readline-sync`);
 
 let somaPositivos = 0;
 let somaNegativos = 0;
